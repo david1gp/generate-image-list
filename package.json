@@ -1,0 +1,46 @@
+{
+  "name": "@adaptive-ds/generate-image-list",
+  "version": "0.1.0",
+  "scripts": {
+    "build": "bun build.ts",
+    "format": "bunx prettier --write src/ build.ts"
+  },
+  "dependencies": {
+    "image-size": "^1.2.1"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  },
+  "prettier": {
+    "semi": false,
+    "printWidth": 120,
+    "trailingComma": "all"
+  },
+  "type": "module",
+  "private": false,
+  "license": "MIT",
+  "description": "Auto-generate TypeScript image lists with dimensions. No manual measurement required.",
+  "keywords": [
+    "image",
+    "images",
+    "dimensions",
+    "width",
+    "height",
+    "typescript",
+    "generator",
+    "assets"
+  ],
+  "repository": {
+    "url": "git+https://github.com/david1gp/generate-image-list.git"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  }
+}
