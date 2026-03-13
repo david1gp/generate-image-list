@@ -6,12 +6,12 @@
     "format": "bunx prettier --write src/ build.ts"
   },
   "dependencies": {
-    "image-size": "^1.2.1"
+    "image-size": "^2.0.2"
   },
   "devDependencies": {
     "@types/bun": "latest",
-    "@types/node": "^20.0.0",
-    "typescript": "^5.0.0"
+    "@types/node": "^25.5.0",
+    "typescript": "^5.9.3"
   },
   "prettier": {
     "semi": false,
