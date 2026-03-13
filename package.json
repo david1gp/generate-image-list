@@ -1,6 +1,6 @@
 {
   "name": "@adaptive-ds/generate-image-list",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "scripts": {
     "build": "bun build.ts",
     "format": "bunx prettier --write src/ build.ts",
