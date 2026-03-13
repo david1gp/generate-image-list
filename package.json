@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "scripts": {
     "build": "bun build.ts",
-    "format": "bunx prettier --write src/ build.ts"
+    "format": "bunx prettier --write src/ build.ts",
+    "release": "bash ops/release.sh"
   },
   "dependencies": {
     "image-size": "^2.0.2"
