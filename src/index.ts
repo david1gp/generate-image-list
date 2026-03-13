@@ -1,6 +1,6 @@
-import imageSize from "image-size";
-import { promises as fs } from "node:fs";
-import path from "node:path";
+import imageSize from "image-size"
+import { promises as fs } from "node:fs"
+import path from "node:path"
 
 const IMAGE_EXTENSIONS = new Set([
   ".jpg",
@@ -45,9 +45,9 @@ function getMimeType(ext: string): string {
 
 export async function generateImageList(
   imageDirectory: string,
-  existingImages: Record<string, ImageType>,
   outputPath: string,
-  imageTypeImportPath: string,
+  existingImages: Record<string, ImageType>,
+  imageTypeImportPath: string = "@adaptive-ds/generate-image-list",
 ) {
   const imageMap = await processImageFiles(imageDirectory, existingImages);
   const sorted = sortImageMap(imageMap);
@@ -73,7 +73,7 @@ export const imageList = ${JSON.stringify(imageMap, null, 2)} as const satisfies
 
 async function processImageFiles(
   directory: string,
-  existingImages: Record<string, ImageType>,
+  existingImages: Record<string, ImageType> = {},
 ): Promise<Record<string, ImageType>> {
   const imageMap: Record<string, ImageType> = {};
 
