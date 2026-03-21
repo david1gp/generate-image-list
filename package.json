@@ -2,7 +2,7 @@
   "name": "@adaptive-ds/generate-image-list",
   "version": "0.2.0",
   "scripts": {
-    "build": "bun build.ts",
+    "build": "rm -rf ./dist && bun tsc -p ./tsconfig.lib.json",
     "format": "bunx prettier --write src/ build.ts",
     "release": "bash ops/release.sh"
   },
@@ -42,6 +42,10 @@
     ".": {
       "import": "./dist/index.js",
       "types": "./dist/index.d.ts"
+    },
+    "./*.js": {
+      "types": "./dist/*.d.ts",
+      "import": "./dist/*.js"
     }
   }
 }
