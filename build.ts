@@ -1,4 +1,4 @@
-import { build } from "bun";
+import { build } from "bun"
 
 await build({
   entrypoints: ["./src/index.ts"],
@@ -8,14 +8,7 @@ await build({
   splitting: false,
   minify: false,
   sourcemap: "linked",
-});
+})
 
-const tsc = Bun.spawn([
-  "bun",
-  "run",
-  "tsc",
-  "--declaration",
-  "--declarationMap",
-  "--emitDeclarationOnly",
-]);
-await tsc.exited;
+const tsc = Bun.spawn(["bun", "run", "tsc", "--declaration", "--declarationMap", "--emitDeclarationOnly"])
+await tsc.exited
